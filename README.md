@@ -14,6 +14,9 @@ Welcome to the demo of my WPM (Words Per Minute) test! This tool is designed to 
 ## Development Process
 This WPM test was built using HTML, CSS, and JavaScript, focusing on real-time typing tracking, accuracy, and a timer-based system to measure performance efficiently.
 
+<br><br>
+When the game starts, the gameStart() function is called to initialize the game. A setTimeout is used to introduce a 1-second delay, giving you time to prepare. This function's primary role is to start the timer and display the word you'll be typing.
+
 ```javascript
 function gameStart() {
   interval();
@@ -38,7 +41,7 @@ function interval() {
 }
 ```
 <br><br>
-When the game starts, the gameStart() function is called to initialize the game. A setTimeout is used to introduce a 1-second delay, giving you time to prepare. This function's primary role is to start the timer and display the word you'll be typing.
+Next, an event listener listens for any input and calls the compare() function. This function checks if the typed word matches the target word. If correct, the word is removed from the input, allowing you to continue typing the next word.
 
 ```javascript
 listener(input, 'input', () => {
@@ -60,12 +63,11 @@ function compare(char) {
 }
 ```
 <br><br>
-Next, an event listener listens for any input and calls the compare() function. This function checks if the typed word matches the target word. If correct, the word is removed from the input, allowing you to continue typing the next word.
-
+Next, when the timer reaches 0, the getWPM() function is called from the interval(). This function calculates your WPM result by taking the number of correct words identified by the compare() function and dividing it by 5
 ```javascript
 function getWPM() {
   wpm = correctCount / 5;
   result.innerText = `WPM: ${wpm}`;
 }
 ```
-Next, when the timer reaches 0, the getWPM() function is called from the interval(). This function calculates your WPM result by taking the number of correct words identified by the compare() function and dividing it by 5
+
