@@ -10,7 +10,7 @@ function listener(selector, event, callBack) {
   return selector.addEventListener(event, callBack);
 }
 
-const input = selector('.input');
+const input = selector('input');
 const targetText = selector('.words');
 const body = selector('body');
 const button = selector('button');
@@ -54,7 +54,7 @@ function reset() {
 
 function getWPM() {
   wpm = correctCount / 5;
-  result.innerText = `WPM: ${wpm}`
+  result.innerText = `WPM: ${wpm}`;
 }
 
 function gameStart() {
@@ -93,8 +93,4 @@ function compare(char) {
 
 function cutWord(char, rest) {
   return `<span>${char}</span>${rest}`;
-}
-
-function getWords() {
-
 }
