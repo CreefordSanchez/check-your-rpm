@@ -13,3 +13,18 @@ Welcome to the demo of my WPM (Words Per Minute) test! This tool is designed to 
 
 ## Development Process
 This WPM test was built using HTML, CSS, and JavaScript, focusing on real-time typing tracking, accuracy, and a timer-based system to measure performance efficiently.
+
+<br>
+
+```javascript
+// Example of JavaScript code snippet
+const startButton = document.getElementById("startButton");
+startButton.addEventListener("click", () => {
+console.log("Test started!");
+});
+
+const calculateWPM = (charactersTyped, timeInMinutes) => {
+return charactersTyped / 5 / timeInMinutes;
+};
+console.log(calculateWPM(100, 1)); // Output: 20 WPM
+```
