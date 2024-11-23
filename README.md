@@ -14,8 +14,6 @@ Welcome to the demo of my WPM (Words Per Minute) test! This tool is designed to 
 ## Development Process
 This WPM test was built using HTML, CSS, and JavaScript, focusing on real-time typing tracking, accuracy, and a timer-based system to measure performance efficiently.
 
-<br>
-
 ```javascript
 function gameStart() {
   interval();
@@ -39,9 +37,8 @@ function interval() {
   }, 1000);
 }
 ```
+<br><br>
 When the game starts, the gameStart() function is called to initialize the game. A setTimeout is used to introduce a 1-second delay, giving you time to prepare. This function's primary role is to start the timer and display the word you'll be typing.
-
-<br>
 
 ```javascript
 listener(input, 'input', () => {
@@ -62,9 +59,8 @@ function compare(char) {
   }
 }
 ```
+<br><br>
 Next, an event listener listens for any input and calls the compare() function. This function checks if the typed word matches the target word. If correct, the word is removed from the input, allowing you to continue typing the next word.
-
-<br>
 
 ```javascript
 function getWPM() {
